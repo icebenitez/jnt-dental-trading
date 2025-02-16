@@ -1,0 +1,1 @@
+export const businessName = "J&T Dental Trading";
