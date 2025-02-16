@@ -11,6 +11,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
+import { dentalProducts } from "@/lib/variables"
 import { ChevronDown } from "lucide-react"
 
 export default function Home() {
@@ -57,8 +58,8 @@ export default function Home() {
       </div>
       <ScrollArea>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
-          {Array.from({ length: 12 }).map((_, i) => (
-            <ProductCard key={i} />
+          {dentalProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
         <ScrollBar orientation="horizontal" />
